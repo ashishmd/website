@@ -969,10 +969,10 @@
                 <!-- CONTACT FORM -->
                 <div class="card">
                     <div class="card-content">
-                        <form id="contact-form" name="c-form">
+                        <form id="contact-forms" method="POST" action="https://formspree.io/emailme@ashishm.dev">
                             <!-- NAME -->
                             <div class="input-field">
-                                <input id="first_name" type="text" class="validate" name="first_name" required>
+                                <input id="first_name" type="text" class="validate" name="name" required>
                                 <label for="first_name">Name</label>
                             </div>
                             <!--SUBJECT-->
@@ -982,7 +982,7 @@
                             </div>
                             <!--EMAIL-->
                             <div class="input-field">
-                                <input id="email" type="email" class="validate" name="email" required>
+                                <input id="email" type="email" class="validate" name="_replyto" required>
                                 <label for="email">Email</label>
                             </div>
                             <!--MESSAGE-->
@@ -993,7 +993,7 @@
                             </div>
                             <!-- SEND BUTTON -->
                             <div class="contact-send">
-                                <button id="submit" name="contactSubmit" type="submit" value="Submit"
+                                <button id="submit" name="contactSubmit" type="submit" value="Send"
                                         class="btn waves-effect">Send
                                 </button>
                             </div>
