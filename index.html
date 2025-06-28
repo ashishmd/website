@@ -66,7 +66,7 @@
         <section id="about" class="min-h-[80vh] flex items-center py-20 fade-in">
             <div class="max-w-4xl">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 leading-tight">Ashish Muralidharan</h1>
-                <p class="mt-4 text-xl md:text-2xl font-medium text-blue-600">Tech Lead & Senior Software Engineer | Node.js & Next.js Specialist</p>
+                <p class="mt-4 text-xl md:text-2xl font-medium text-blue-600">Tech Lead & Senior Software Engineer</p>
                 <p class="mt-6 text-lg text-stone-700 leading-relaxed">
                     With over 9 years of experience, I am a Tech Lead specializing in designing and building scalable, resilient backend systems with Node.js and Next.js. My work focuses on driving architectural decisions, mentoring engineers to elevate their skills, and fostering a culture of high-quality, secure code. I thrive on solving complex problems, whether through hands-on coding or by guiding my team to successful outcomes. My goal is to build impactful products and empower the teams behind them.
                 </p>
@@ -331,17 +331,72 @@
         <section id="publications" class="py-24 bg-stone-50 rounded-2xl">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-stone-900">Publications</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">I believe in sharing knowledge with the community. Here are some articles I've written to explore technical concepts and share solutions.</p>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">I believe in sharing knowledge with the community. Here are some articles I've written to explore technical concepts, share solutions, and document my professional journey.</p>
             </div>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <a href="https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-1-overview-8a37136511af" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow fade-in">
-                    <h3 class="text-xl font-bold text-blue-600">Summary of Clean Code by Robert C Martin - Part 1</h3>
-                    <p class="text-stone-600 mt-2">An overview of the foundational principles from the classic software engineering text.</p>
-                </a>
-                <a href="https://ashishmd.medium.com/bulk-import-in-ruby-on-rails-older-versions-5227183735e1" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow fade-in">
-                    <h3 class="text-xl font-bold text-blue-600">Bulk Import in Ruby On Rails older versions</h3>
-                    <p class="text-stone-600 mt-2">A technical guide to performing efficient bulk imports in legacy Rails applications.</p>
-                </a>
+            <div class="max-w-6xl mx-auto">
+                <!-- Featured Series -->
+                <div class="mb-12 fade-in">
+                    <h3 class="text-2xl font-bold text-stone-800 mb-6 text-center">Clean Code Series</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-1-overview-c8894d975ebb" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-200 hover:border-blue-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Part 1</span>
+                                <svg class="w-5 h-5 text-stone-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-stone-800 group-hover:text-blue-600 transition-colors mb-2">Overview</h4>
+                            <p class="text-sm text-stone-600">Foundational principles from the classic software engineering text.</p>
+                        </a>
+                        <a href="https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-2-meaningful-names-5b5baaa5b3c6" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-200 hover:border-blue-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Part 2</span>
+                                <svg class="w-5 h-5 text-stone-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-stone-800 group-hover:text-blue-600 transition-colors mb-2">Meaningful Names</h4>
+                            <p class="text-sm text-stone-600">Deep dive into naming conventions and best practices for clean, readable code.</p>
+                        </a>
+                        <a href="https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-3-functions-72b3115472e" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-200 hover:border-blue-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Part 3</span>
+                                <svg class="w-5 h-5 text-stone-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-stone-800 group-hover:text-blue-600 transition-colors mb-2">Functions</h4>
+                            <p class="text-sm text-stone-600">Comprehensive guide to writing clean, maintainable functions with practical examples.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Other Publications -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-stone-800 mb-6 text-center">Featured Articles</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a href="https://ashishmd.medium.com/navigating-the-challenges-and-milestones-as-the-first-member-in-zoom-video-communications-india-b78679605770" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-200 hover:border-blue-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Leadership</span>
+                                <svg class="w-5 h-5 text-stone-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-stone-800 group-hover:text-blue-600 transition-colors mb-2">Navigating Challenges as First Member in Zoom India R&D</h4>
+                            <p class="text-sm text-stone-600">Personal journey of building from scratch, leading teams, and achieving technical milestones at Zoom.</p>
+                        </a>
+                        <a href="https://ashishmd.medium.com/bulk-import-in-ruby-on-rails-older-versions-5227183735e1" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-stone-200 hover:border-blue-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Technical</span>
+                                <svg class="w-5 h-5 text-stone-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-stone-800 group-hover:text-blue-600 transition-colors mb-2">Bulk Import in Ruby On Rails older versions</h4>
+                            <p class="text-sm text-stone-600">A technical guide to performing efficient bulk imports in legacy Rails applications.</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
