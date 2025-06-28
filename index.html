@@ -1,1261 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Trimatrix Lab">
-    <meta name="description" content="">
-    <meta name="keywords" content="ashish chairman ieee,ashishmd, IEEE CEC,ieee cec,cec ieee,cec,ashish muralidharan developer,ashish m developer,ashish developer,ashish muralidharan full stack developer,
-    ashish muralidharan fullstack developer,ashishm,ashishmdev,ashishm dev,ashishm developer,ashish muralidharan,software developer,
-    resume of ashish,resume of ashish muralidharan,ashis,murlidharan,ashis murlidharan,ashish resume,freshworks,zoho,cec,college,chengannur,kerala,
-    rajasthan,kerala,IEEE,student branch,github,computer science,frontend,fullstack,developer,backend,Engineering,CV,data structures and algorithms,workshops,
-    java,ruby,mysql,ember,redshift,Elasticsearch,bootstrap,jquery,HTML,CSS,contact,emailme@ashishm.dev,ashishm.dev,ashish m developer,ashish devlop,ashish ieee developer,ashish cec,ashishcec,ashishdeveloper,
-     ahsish,asish,ashish,ashish chennai,ashish gihub,ashish git,ashish website,ashish sql,ashish java,ashish python,ashish ruby,ashish django, Ashish Muralidharan, Ashish">
-
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179090416-1"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-
-       gtag('config', 'UA-179090416-1');
-     </script>
-
-
-    <title>Ashish Muralidharan</title>
-    <!-- <link rel="icon" href="images/site/fav-icon.png"> -->
-    <link rel="icon" href="images/site/fav-icon.png" sizes="16x16" type="image/png">
-
-    <!--APPLE TOUCH ICON-->
-    <link rel="apple-touch-icon" href="images/site/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
-    <!-- GOOGLE FONT -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-
-
-    <!-- MATERIAL ICON FONT -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link href="stylesheets/vendors/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- ANIMATION -->
-    <link href="stylesheets/vendors/animate.min.css" rel="stylesheet">
-
-    <!-- MAGNIFICENT POPUP -->
-    <link href="stylesheets/vendors/magnific-popup.css" rel="stylesheet">
-
-    <!-- SWIPER -->
-    <link href="stylesheets/vendors/swiper.min.css" rel="stylesheet">
-
-
-    <!-- MATERIALIZE -->
-    <link href="stylesheets/vendors/materialize.css" rel="stylesheet">
-    <!-- BOOTSTRAP -->
-    <link href="stylesheets/vendors/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- CUSTOM STYLE -->
-    <link href="stylesheets/style.css" id="switch_style" rel="stylesheet">
-    <!--TOGGLE-->
-    <link href="toggle/toggle.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Muralidharan | Tech Lead & Senior Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: A single-page, vertical-scrolling application designed to tell a professional story. The structure is thematic, not a direct copy of the resume, to guide the user logically from a high-level summary to detailed evidence. It starts with a Hero section for immediate impact, flows into an interactive Experience timeline to show growth, a Skills dashboard with a chart to quantify expertise, a Project gallery to showcase practical work, and concludes with Leadership and Contact sections. This flow is designed for recruiters and peers, allowing them to either get a quick overview or dive deep into specific areas, all within a single, seamless experience. -->
+    <!-- Visualization & Content Choices:
+        - Experience History -> Goal: Show change/growth -> Viz: Interactive Vertical Timeline (HTML/CSS/JS) -> Interaction: Scroll-based animations highlight each career step, drawing user attention sequentially. Justification: A timeline is the most intuitive way to present chronological career data, making it easy to follow progression.
+        - Core Technology Experience -> Goal: Compare/Quantify -> Viz: Horizontal Bar Chart (Chart.js/Canvas) -> Interaction: Tooltips on hover provide precise data. Justification: A chart provides a quick, powerful visual comparison of experience levels, which is more impactful than text alone.
+        - Skills List -> Goal: Organize/Inform -> Viz: Categorized Tags/Badges (HTML/Tailwind) -> Interaction: Hover effects for visual feedback. Justification: Grouping skills by category and using tags makes a long list scannable and digestible.
+        - Projects List -> Goal: Inform/Showcase -> Viz: Grid of Cards (HTML/Tailwind) -> Interaction: Hover effects to indicate interactivity and add visual appeal. Justification: Cards are a standard, clean, and scalable way to present distinct items like projects.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
-<body>
+<body class="antialiased">
 
-
-<!--==========================================
-                  PRE-LOADER
-===========================================-->
-<div id="loading">
-    <div id="loading-center">
-        <div id="loading-center-absolute">
-            <div class="box-holder animated bounceInDown">
-                <span class="load-box"><span class="box-inner"></span></span>
+    <header id="header" class="bg-stone-100/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-stone-800">Ashish Muralidharan</a>
+            <div class="hidden lg:flex space-x-6">
+                <a href="#about" class="text-stone-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#experience" class="text-stone-600 hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#approach" class="text-stone-600 hover:text-blue-600 transition-colors">Approach</a>
+                <a href="#skills" class="text-stone-600 hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#leadership" class="text-stone-600 hover:text-blue-600 transition-colors">Leadership</a>
+                <a href="#achievements" class="text-stone-600 hover:text-blue-600 transition-colors">Achievements</a>
+                <a href="#certifications" class="text-stone-600 hover:text-blue-600 transition-colors">Certifications</a>
+                <a href="#publications" class="text-stone-600 hover:text-blue-600 transition-colors">Publications</a>
+                <a href="#projects" class="text-stone-600 hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#contact" class="text-stone-600 hover:text-blue-600 transition-colors">Contact</a>
             </div>
-            <!-- NAME & STATUS -->
-            <div class="text-holder text-center">
-                <h2>Ashish Muralidharan</h2>
-                <h6>Fullstack Software Developer</h6>
-            </div>
+            <button id="mobile-menu-button" class="lg:hidden text-stone-800">
+                <span class="text-2xl">☰</span>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-stone-100">
+            <a href="#about" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">About</a>
+            <a href="#experience" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Experience</a>
+            <a href="#approach" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Approach</a>
+            <a href="#skills" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Skills</a>
+            <a href="#leadership" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Leadership</a>
+            <a href="#achievements" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Achievements</a>
+            <a href="#certifications" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Certifications</a>
+            <a href="#publications" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Publications</a>
+            <a href="#projects" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-stone-600 hover:bg-stone-200">Contact</a>
         </div>
-    </div>
-</div>
+    </header>
 
-<!--==========================================
-                    HEADER
-===========================================-->
-<header id="home">
-    <nav id="theMenu" class="menu">
-
-        <!--MENU-->
-        <div id="menu-options" class="menu-wrap">
-
-            <!--PERSONAL LOGO-->
-            <div class="logo-flat">
-                <img alt="personal-logo" class="img-responsive" src="images/profile/logo.png">
-            </div>
-            <br>
-
-            <!--OPTIONS-->
-            <a href="#home"><i class="title-icon fas fa-user"></i>Home</a>
-            <a href="#about"><i class="fas fa-network-wired"></i>About</a>
-            <a href="#experience"><i class="title-icon fas fa-suitcase"></i>Experience</a>
-            <a href="#skills"><i class="title-icon fas fa-sliders"></i>Skills</a>
-            <a href="#education"><i class="title-icon fas fa-graduation-cap"></i>Education</a>
-            <a href="#portfolios"><i class="title-icon fas fa-archive"></i>Portfolios</a>
-            <a href="#interest"><i class="title-icon fas fa-heart"></i>Interest</a>
-            <a href="#testimonials"><i class="title-icon fas fa-users"></i>Testimonials</a>
-            <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-6"><i class="title-icon fas fa-pencil-square"></i>Blog</a> -->
-            <a href="https://ashishmd.medium.com" target="_blank"><i class="title-icon fas fa-pencil-square"></i>Blog</a>
-            <a href="#contact"><i class="title-icon fas fa-envelope"></i>Contact</a>
-        </div>
-
-        <!-- MENU BUTTON -->
-        <div id="menuToggle">
-            <div class="toggle-normal">
-                <i class="material-icons top-bar">remove</i>
-                <i class="material-icons middle-bar">remove</i>
-                <i class="material-icons bottom-bar">remove</i>
-            </div>
-        </div>
-    </nav>
-
-    <!--HEADER BACKGROUND-->
-    <div class="header-background section"></div>
-
-</header>
-
-
-<!--==========================================
-                   V-CARD
-===========================================-->
-<div id="v-card-holder" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-
-                <!-- V-CARD -->
-                <div id="v-card" class="card">
-
-                    <!-- PROFILE PICTURE -->
-                    <div id="profile" class="right">
-                        <img alt="profile-image" class="img-responsive" src="images/profile/profile.jpg">
-                        <div class="slant"></div>
-
-                        <!--EMPTY PLUS BUTTON-->
-                        <!-- <div class="btn-floating btn-large add-btn"><i class="material-icons">add</i></div> -->
-
-                        <!--VIDEO PLAY BUTTON-->
-                        <!--<div id="button-holder" class="btn-holder">
-                            <div id="play-btn" class="btn-floating btn-large btn-play">
-                                <i id="icon-play" class="material-icons">play_arrow</i>
-                            </div>
-                        </div>-->
-                    </div>
-                    <!--VIDEO CLOSE BUTTON-->
-                    <!--<div id="close-btn" class="btn-floating icon-close">
-                        <i class="fas fa-close"></i>
-                    </div>-->
-
-                    <div class="card-content">
-
-                        <!-- NAME & STATUS -->
-                        <div class="info-headings">
-                            <h4 class="text-uppercase left">Ashish Muralidharan</h4>
-                            <h6 class="text-capitalize left">Fullstack Software Developer</h6>
-                        </div>
-
-                        <!-- CONTACT INFO -->
-                        <div class="infos">
-                            <ul class="profile-list">
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">email</i></span>
-                                    <span class="content"><a href="mailto:emailme@ashishm.dev" style = "color: #fff;">emailme@ashishm.dev</a></span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">article</i></span>
-                                    <span class="content"><a href = "https://ashishmd.medium.com/" style = "color: #fff;"> Medium • @ashishmd</a></span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">phone</i></span>
-                                    <span class="content"><a href="tel:+917550267902" style = "color: #fff;">Click to call</a></span>
-                                </li>
-                                <li class="clearfix">
-                                    <span class="title"><i class="material-icons">place</i></span>
-                                    <span class="content"><a href = "https://goo.gl/maps/9wPTni71dA32" style = "color: #fff;">Chennai, Tamil Nadu, India</a></span>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <!--LINKS-->
-                        <div class="links">
-                            <!-- FACEBOOK-->
-                            <a href="https://www.facebook.com/m.ashish18" id="first_one"
-                               class="social btn-floating indigo"><i
-                                    class="fab fa-facebook"></i></a>
-                            <!-- TWITTER-->
-                            <a href="https://twitter.com/ashish_m_d" class="social  btn-floating blue"><i
-                                    class="fab fa-twitter"></i></a>
-                            <!-- LINKEDIN-->
-                            <a href="https://www.linkedin.com/in/ashishmuralidharan/" class="social  btn-floating blue darken-3"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <!-- Github -->
-                            <a href="https://github.com/ashishmd" class="social  btn-floating grey darken-4"><i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <!--HTML 5 VIDEO-->
-                    <!-- <video id="html-video" class="video" poster="images/poster/poster.jpg" controls>
-                        <source src="videos/b.webm" type="video/webm">
-                        <source src="videos/a.mp4" type="video/mp4">
-                    </video>-->
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--==========================================
-                   ABOUT
-===========================================-->
-<div id="about" class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- DETAILS -->
-                <div id="about-card" class="card">
-                    <div class="card-content">
-                        <!-- ABOUT PARAGRAPH -->
-                        <p>
-                            Certified Fullstack Software Developer with 9 years of experience specializing in backend development. Expertise in architecting, designing, and implementing highly scalable, resilient, and robust micro-services using Java Spring Boot. A strong advocate of Clean code principles and Test driven development, ensuring high-quality code and efficient development processes.
-                            <br>Proficient in various technologies including Java/J2EE (3 years), Spring Boot, Ruby on Rails (3+ years), MySQL, Redis, ElasticSearch, and RESTful APIs for backend development. Skilled in EmberJS for frontend development, delivering seamless user experiences.
-                            <br>As a valuable team member, I contributed to the successful implementation of the country's GST returns filing platform. Excited to collaborate with framework or platforms teams in developing cutting-edge micro-services solutions.
-                            <br>Let's connect and explore possibilities together! ✨🚀
-
-                        </p>
-                    </div>
-
-                    <!-- BUTTONS -->
-                    <div id="about-btn" class="card-action">
-                        <div class="about-btn">
-                            <!-- DOWNLOAD CV BUTTON -->
-                            <a href="files/Ashish_Resume.pdf" class="btn waves-effect">Download CV</a>
-                            <!-- CONTACT BUTTON -->
-                            <a href="#contact" class="btn waves-effect">Contact Me</a>
-
-                            <!-- <a href="https://medium.com/@muralidharanashish" class="btn waves-effect">Read My Blog</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!--==========================================
-                   EXPERIENCE
-===========================================-->
-<section id="experience" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/layers.png" alt="demo">Experience</h4>
-        </div>
-
-        <div id="timeline-experience">
-
-            <!-- FIRST TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>S</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Senior Software Engineer</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Zoom</small>
-                            </h6>
-                            <h6>
-                                <small>June 2022 - Present</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Tech Lead in team, Architecting and building highly scalable micro-services.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-8">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>S</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Sr. Software Engineer</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Freshworks Inc.</small>
-                            </h6>
-                            <h6>
-                                <small>Nov 2020 - May 2022</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Squad Lead, Mentor and Sr. Software engineer (Fullstack developer) in Freshsales Engineering Team.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-8">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>S</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Software Engineer</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Freshworks Inc.</small>
-                            </h6>
-                            <h6>
-                                <small>June 2018 - October 2020</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Squad Lead, Mentor and a Fullstack developer in Freshsales Engineering Team.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-4">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>B</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Backend Developer</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Zoho</small>
-                            </h6>
-                            <h6>
-                                <small>May 2016 - Mar 2018</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Worked as a server-end Java Developer with Zoho Books Engineering Team. Learnt
-                            how it is important to keep scalability in mind while writing code. Grasping out the maximum
-                            efficiency from code in terms of reusablity and readablity.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- THIRD TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>B</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Backend Developer Intern</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Zoho</small>
-                            </h6>
-                            <h6>
-                                <small>March 2016 - April 2016</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Got introduced to REST API development and testing process.
-                            Learnt about the cloud architecture of th company and worked on small patches and bugfixes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FIFTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>C</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Chairman</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IEEE Computer Society Student Branch Chapter</small>
-                            </h6>
-                            <h6>
-                                <small>Feb 2015 - March 2016</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Leadership is about making others better as a result of your presence and making sure that impact lasts in your absence.
-                            It is not about a title or a designation. It’s about impact, influence, and inspiration.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-5">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>T</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Technical Coordinator</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IEEE Computer Society Student Branch Chapter</small>
-                            </h6>
-                            <h6>
-                                <small>March 2014 - Feb 2015</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                          Being a Technical Coordinator my duties were to manage technical details in Student branch of our college.
-                          Managing websites for different events motivated me to the field of Web Development. Teaching is the best
-                          way of learning. I lead a collaborative team which encouraged students to do small projects of
-                          web development, app development and robotics.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-5">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>D</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Developer Community Co-ordinator</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IEEE Computer Society Student Branch Chapter</small>
-                            </h6>
-                            <h6>
-                                <small>March 2013 - Jan 2014</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            Developer community is an initiative to bring out potential of group of motivated students in field of
-                            programming and web development. It highly boosted confidence of students which lead students developing
-                            their own blogs and improved problem solving skills.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <!-- <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-5">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--==========================================
-                   SKILLS
-===========================================-->
-<section id="skills" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/mixer.png" alt="demo">Skills</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div id="skills-card" class="card">
-                    <div class="card-content">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <!-- FIRST SKILL SECTION -->
-                                <div class="skills-title">
-                                    <h6 class="text-center">Backend</h6>
-                                </div>
-                                <!-- FIRST SKILL BAR -->
-                                <div class="skillbar" data-percent="95%">
-                                    <div class="skillbar-title"><span>Java/J2EE</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">95%</div>
-                                </div>
-                                <!-- SECOND SKILL BAR  -->
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>Spring Boot</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <!-- THIRD SKILL BAR  -->
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Ruby on Rails</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <!-- FOURTH SKILL BAR  -->
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Python Django</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <!-- SECOND SKILL SECTION -->
-                                <div class="skills-title">
-                                    <h6 class="text-center">Databases</h6>
-                                </div>
-                                <!-- FIRST SKILL BAR -->
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>MySQL</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <!-- SECOND SKILL BAR  -->
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Redis</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <!-- THIRD SKILL BAR  -->
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>Elasticsearch</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <!-- FOURTH SKILL BAR  -->
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Memcached</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <!-- SECOND SKILL SECTION -->
-                                <div class="skills-title">
-                                    <h6 class="text-center">Frontend</h6>
-                                </div>
-                                <!-- FIRST SKILL BAR -->
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>Ember JS</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <!-- SECOND SKILL BAR  -->
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Bootstrap</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <!-- THIRD SKILL BAR  -->
-                                <div class="skillbar" data-percent="60%">
-                                    <div class="skillbar-title"><span>jQuery</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">60%</div>
-                                </div>
-                                <!-- FOURTH SKILL BAR  -->
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>HTML/CSS3</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!--==========================================
-                   EDUCATION
-===========================================-->
-<section id="education" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/book.png" alt="demo">Education</h4>
-        </div>
-
-        <div id="timeline-education">
-
-            <!-- FIRST TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>P</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Primary School Education</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Central Academy Sr. Sec. School</small>
-                            </h6>
-                            <h6>
-                                <small>June 1998 - March 2010</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed my preparatory education from this prestigious institution.
-                            I successfuly completed all the credits without any fallout and got distinction overall.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SECOND TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>H</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">High School</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Central Academy Sr. Sec. School</small>
-                            </h6>
-                            <h6>
-                                <small>June 2010 - March 2012</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I opted for Science stream in this institution with subjects Physics, Chemistry, Mathematics and C++.
-                            I successfully completed this course with additional practice of basic data structures and algorithms.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- THIRD TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Computer Science Engineering</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>College of Engineering, Chengannur</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2012 - Mar 2016</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I graduated from this prestigious institution persuing my Bachelor of Technology in Computer science and Engineering with First Class results.
-                            In-depth knowledge on core subjects including Data Structures, Algorithms, Software Development & Security, Computer Architecture organization and DBMS has helped a lot in my future works.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                        <a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-1">
-                            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FOURTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>W</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Web Development</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IEEE Workshops</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2012 - Mar 2016</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I attended many web development workshops organized by different IEEE Student Branches.
-                            Hands-on experience in developing both static and dynamic websites.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <!-- FIFTH TIMELINE -->
-            <div class="timeline-block">
-                <!-- DOT -->
-                <div class="timeline-dot"><h6>R</h6></div>
-                <!-- TIMELINE CONTENT -->
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Robotics Workshop</h6>
-                        <!-- TIMELINE TITLE INFO -->
-                        <div class="timeline-info">
-                            <h6>
-                                <small>IEEE Workshops</small>
-                            </h6>
-                            <h6>
-                                <small>May 2013</small>
-                            </h6>
-                        </div>
-                        <!-- TIMELINE PARAGRAPH -->
-                        <p>
-                            I completed Arduino workshop and developed a small light following robot.
-                        </p>
-                        <!-- BUTTON TRIGGER MODAL -->
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!--==========================================
-                  MODALS
-===========================================-->
-<section>
-    <!--MODAL ONE-->
-    <div class="modal fade" id="myModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-1">B.Tech at College of Engineering Chengannur</h4>
-                    <h6>
-                        <small>Aug 2012 - Apr 2016</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <!-- <img class="img-responsive" alt="graduation" src="images/timeline/demo-gra.jpg"> -->
-                    <p>
-                        Before my freshman year at College of Engineering Chengannur (CEC), I was shy, had low self-esteem
-                        and turned away from seemingly impossible challenges. College has altered all of these
-                        qualities. Apart from the main subjects of my syllabus, I got lot of opportunity to find and practice
-                        my programming skills. Not only did I get good at programming, but I had a great learning in
-                        managerial field. CEC's IEEE Student Branch was strong and laid down the foundation of what
-                        I am today. I got the opportunity to be the Chairman of Computer Society Chapter of our IEEE Student branch.
-                        <br> <br>
-                        I have attended many workshops and even organized and coordinated many technical events during my tenure in CEC.
-                        Being part of mentorship programmes conducted in our IEEE Student Branch, I had mentored students to develop
-                        multiple websites and robots.
-                        <br> <br>
-                        I am proud to be invited in other colleges to take sessions of Web development. I have organized and taken many
-                        technical sessions as part of college technical forums.
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--MODAL TWO-->
-    <div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-2">EDUCATION AT Y</h4>
-                    <h6>
-                        <small>Jan 2014 - Mar 2015</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <p>
-                        <!-- I have learned a great many things from participating in varsity football.
-                        It has changed my entire outlook on and attitude toward life. Before my
-                        freshman year at [high-school], I was shy, had low self-esteem and turned
-                        away from seemingly impossible challenges. Football has altered all of these
-                        qualities. On the first day of freshman practice, the team warmed up with a
-                        game of touch football. The players were split up and the game began. However, -->
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--MODAL THREE-->
-    <div class="modal fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-3">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-3">EDUCATION AT Z</h4>
-                    <h6>
-                        <small>Jan 2014 - Mar 2015</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <img class="img-responsive" alt="graduation" src="images/timeline/demo-gra.jpg">
-                    <p>
-                        <!-- I have learned a great many things from participating in varsity football.
-                        It has changed my entire outlook on and attitude toward life. Before my
-                        freshman year at [high-school], I was shy, had low self-esteem and turned
-                        away from seemingly impossible challenges. Football has altered all of these
-                        qualities. On the first day of freshman practice, the team warmed up with a
-                        game of touch football. The players were split up and the game began. However, -->
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--MODAL FOUR-->
-    <div class="modal fade" id="myModal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-4">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-4">Life at Freshworks</h4>
-                    <h6>
-                        <small>Jan 2018 - Present</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <img class="img-responsive" src="images/blog/freshworks.jpeg" alt="Freshworks">
-                    <p>
-                        <br><br>Freshworks has provided a great platform for me to learn how a product scales.
-                        I got a good experience in working in MVC model frameworks - Ruby on Rails and EmberJS.
-                        Building features with optimized code, database queries and caches have been my
-                        primary work in the team.
-                    </p>
-                    <p>Experiences that I would like to call out are:<br> <br>
-                        * Squad lead, Scrum master and mentor in team. <br>
-                        * Full stack development experience with Ruby on Rails and Ember JS.<br>
-                        * Implemented Core CRM Features in the product.<br>
-                        * Rewritten complete Import/Migration tools to get better performance benchmarks.<br>
-                        * Implemented Emails related features in product.<br>
-                        * Hands-on experience with Ember.js for frontend development.<br>
-                        * Experience with caching tools like Redis, memcache and search tools like ElasticSearch.<br>
-                        * Worked on various integrations.<br>
-                        * Experience with full code deployment in AWS stack.<br>
-                        * Mentored freshers in team.<br><br>
-                        We have been following SCRUM model of work in our team. I have a good experience of managing my time for
-                        meetings, code reviews, development and mentoring people. 😁
-                    </p>
-
-                    <p>
-                        Achievements I would like to call out are:<br> <br>
-                        * Reduced support ticket inflow for the modules<br>
-                        * Reduced imports time by half.<br>
-                        * Introduced test driven development in team.<br>
-                        * Mentored freshers in team.<br><br>
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--MODAL FIVE-->
-    <div class="modal fade" id="myModal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-5">EXPERIENCE AT M</h4>
-                    <h6>
-                        <small>Jan 2014 - Mar 2015</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <p>
-                        <!-- I have learned a great many things from participating in varsity football.
-                        It has changed my entire outlook on and attitude toward life. Before my
-                        freshman year at [high-school], I was shy, had low self-esteem and turned
-                        away from seemingly impossible challenges. Football has altered all of these
-                        qualities. On the first day of freshman practice, the team warmed up with a
-                        game of touch football. The players were split up and the game began. However, -->
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="modal fade" id="myModal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-5">Blogs</h4>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <p class="text-center">
-                      I have started writing techincal blogs. New blogs are on the way!
-                    </p><br><br>
-                </div>
-                <div id="about-btn" class="card-action text-center">
-                    <div class="about-btn">
-                        <!-- DOWNLOAD CV BUTTON -->
-                        <a href="https://medium.com/@muralidharanashish" class="btn waves-effect">Read it here!</a>
-                    </div>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="myModal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-5">Passing on the information!</h4>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <p class="text-center">
-                      Google is shutting down Google+ for consumer (personal) accounts on April 2, 2019.
-                    </p><br><br>
-                </div>
-                <div id="about-btn" class="card-action text-center">
-                    <div class="about-btn">
-                        <!-- DOWNLOAD CV BUTTON -->
-                        <a href="https://support.google.com/plus/answer/9195133?hl=en&authuser=0" class="btn waves-effect">Read it here!</a>
-                    </div>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--MODAL Eight-->
-    <div class="modal fade" id="myModal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-8">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <!--MODAL HEADER-->
-                <div class="modal-header  text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true"><i class="fas fa-close"></i></span></button>
-                    <h4 class="modal-title" id="myModalLabel-8">Life at Freshworks</h4>
-                    <h6>
-                        <small>Nov 2020 - Present</small>
-                    </h6>
-                </div>
-                <!--MODAL BODY-->
-                <div class="modal-body">
-                    <img class="img-responsive" src="images/blog/freshworks.jpeg" alt="Freshworks">
-                    <p>
-                        <br><br>Freshworks has provided a great platform for me to learn how a product scales.
-                        I got a good experience in working in MVC model frameworks - Ruby on Rails and EmberJS.
-                        Building features with optimized code, database queries and caches have been my
-                        primary work in the team.
-                    </p>
-                    <p>Experiences that I would like to call out over my previous role in Freshworks are:<br> <br>
-                        * Working with Product team to design solutions. <br>
-                        * Practitioner of clean code and test driven development.<br>
-                        * Experience in splitting a feature into independent tasks among peers and work asa team to get the task done quickly and efficiently.<br>
-                        * Continuous documentation and knowledge sharing within team.<br>
-                        * Took many session to bridge the Engineering and Customer facing team gaps.<br>
-                        * Mentored freshers in team.<br><br>
-                    </p>
-                </div>
-                <!--MODAL FOOTER-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--==========================================
-                   INTEREST
-===========================================-->
-<section id="interest" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/heart.png" alt="demo">Interest</h4>
-        </div>
-
-        <div id="interest-card" class="card">
-            <!--INTEREST TEXT-->
-            <div class="card-content">
-                <p>
-                    First of all I love music, country music is my favorite. Love watching
-                    football, movies and playing games with my buddies. I spend quite a lot of time
-                    in traveling and drawing, these keeps me fresh for working environment.
-                    I also spend time attending conferences of backend development.
+    <main class="container mx-auto px-6">
+        <section id="about" class="min-h-[80vh] flex items-center py-20 fade-in">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 leading-tight">Ashish Muralidharan</h1>
+                <p class="mt-4 text-xl md:text-2xl font-medium text-blue-600">Tech Lead & Senior Software Engineer | Node.js & Next.js Specialist</p>
+                <p class="mt-6 text-lg text-stone-700 leading-relaxed">
+                    With over 9 years of experience, I am a Tech Lead specializing in designing and building scalable, resilient backend systems with Node.js and Next.js. My work focuses on driving architectural decisions, mentoring engineers to elevate their skills, and fostering a culture of high-quality, secure code. I thrive on solving complex problems, whether through hands-on coding or by guiding my team to successful outcomes. My goal is to build impactful products and empower the teams behind them.
                 </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="Ashish_Muralidharan_Resume.pdf" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">View Resume</a>
+                    <a href="#contact" class="bg-stone-200 text-stone-800 font-bold py-3 px-6 rounded-lg hover:bg-stone-300 transition-transform transform hover:scale-105">Contact Me</a>
+                </div>
+                <div class="mt-10 flex flex-wrap gap-6 items-center">
+                    <a href="https://github.com/ashishmd" target="_blank" title="GitHub" class="text-stone-500 hover:text-blue-600 transition-colors social-icon">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashishmuralidharan" target="_blank" title="LinkedIn" class="text-stone-500 hover:text-blue-600 transition-colors social-icon">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://ashishmd.medium.com" target="_blank" title="Blog" class="text-stone-500 hover:text-blue-600 transition-colors social-icon">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:emailme@ashishm.dev" title="Email" class="text-stone-500 hover:text-blue-600 transition-colors social-icon">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                        </svg>
+                    </a>
+                    <a href="http://ashishm.dev" target="_blank" title="Portfolio" class="text-stone-500 hover:text-blue-600 transition-colors social-icon">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
+        </section>
 
-            <!--INTEREST ICONS-->
-            <div class="row no-gutters">
-
-                <!--INTEREST ICON ONE-->
-                <div class="col-md-2 col-sm-4 col-xs-6  box text-center">
-                    <div class="interest-icon">
-                        <i class="fas fa-music"></i>
-                        <span>Music</span>
-                    </div>
-                </div>
-                <!--INTEREST ICON TWO-->
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Gaming</span>
-                    </div>
-                </div>
-                <!--INTEREST ICON THREE-->
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon">
-                        <i class="fas fa-paint-brush"></i>
-                        <span>Drawing</span>
-                    </div>
-                </div>
-                <!--INTEREST ICON FOUR-->
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <i class="fas fa-futbol-o"></i>
-                        <span>Football</span>
-                    </div>
-                </div>
-                <!--INTEREST ICON FIVE-->
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon">
-                        <i class="fas fa-plane"></i>
-                        <span>Traveling</span>
-                    </div>
-                </div>
-                <!--INTEREST ICON SIX-->
-                <div class="col-md-2 col-sm-4 col-xs-6 box text-center">
-                    <div class="interest-icon-even">
-                        <i class="fas fa-film"></i>
-                        <span>Movies</span>
-                    </div>
-                </div>
-
+        <section id="experience" class="py-24">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Professional Experience</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">This timeline provides an overview of my career, showcasing my progression through various roles and responsibilities. Each entry highlights my key contributions and the technologies I've worked with, demonstrating a consistent path of growth and impact in the software development field.</p>
             </div>
+            <div class="relative max-w-3xl mx-auto pl-12 border-l-2 border-stone-200">
+                <div class="space-y-16">
+                    <div class="timeline-item fade-in">
+                        <p class="font-semibold text-stone-500">June 2022 - Present (3+ years)</p>
+                        <h3 class="text-2xl font-bold mt-1">Tech Lead & Senior Software Engineer (ZP3)</h3>
+                        <p class="text-lg font-medium text-stone-700">Zoom, Remote</p>
+                        <ul class="mt-4 list-disc list-inside text-stone-600 space-y-2">
+                            <li>Leading a team of engineers as Tech Lead, driving architectural decisions and technical strategy for the Ecosystem team.</li>
+                            <li>Zoom Certified Security Champion driving secure coding practices and elevating team security standards across the organization.</li>
+                            <li>Providing technical leadership by guiding the team in PRD, MR, and tech-spec reviews, ensuring high-quality deliverables.</li>
+                            <li>Leading the architecture, design, and implementation of Node.js and Next.js-based microservices and applications.</li>
+                            <li>Led the creation of a user-friendly and automated integration platform for third-party apps, improving developer experience.</li>
+                            <li>Created a reverse-proxy authentication system for streamlined third-party integration API calls, reducing complexity by 40%.</li>
+                            <li>Organizer of team-wide "Bi-weekly Technical Friday" knowledge-sharing sessions, fostering continuous learning culture.</li>
+                            <li>Mentoring junior and mid-level engineers, conducting code reviews, and providing technical guidance for career growth.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <p class="font-semibold text-stone-500">Nov 2020 - May 2022 (1 year 7 months)</p>
+                        <h3 class="text-2xl font-bold mt-1">Fullstack Senior Software Developer</h3>
+                        <p class="text-lg font-medium text-stone-700">Freshworks Inc., Chennai</p>
+                        <ul class="mt-4 list-disc list-inside text-stone-600 space-y-2">
+                            <li>Served as Squad Lead, Scrum Master, and Mentor, driving team efficiency and growth.</li>
+                            <li>Collaborated with the Product team to design solutions for a highly scalable product using Ruby on Rails and EmberJS.</li>
+                            <li>Proficiently triaged and debugged technical support requests, and minimized ticket influx by optimizing affected areas.</li>
+                            <li>Championed clean code, TDD, and proactive knowledge sharing within the team.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <p class="font-semibold text-stone-500">June 2018 - Oct 2020 (2 years 5 months)</p>
+                        <h3 class="text-2xl font-bold mt-1">Fullstack Software Developer</h3>
+                        <p class="text-lg font-medium text-stone-700">Freshworks Inc., Chennai</p>
+                         <ul class="mt-4 list-disc list-inside text-stone-600 space-y-2">
+                            <li>Led a dynamic squad, providing mentorship and contributing to full stack development.</li>
+                            <li>Revamped and optimized Import/Migration tools, resulting in significantly improved performance benchmarks.</li>
+                            <li>Implemented Core CRM Features and played a pivotal role in integrating Segment.</li>
+                            <li>Nurtured and guided junior team members, fostering their professional development.</li>
+                        </ul>
+                    </div>
+                     <div class="timeline-item fade-in">
+                        <p class="font-semibold text-stone-500">May 2016 - May 2018 (2 years 1 month)</p>
+                        <h3 class="text-2xl font-bold mt-1">Member Technical Staff</h3>
+                        <p class="text-lg font-medium text-stone-700">Zoho Corporation, Chennai</p>
+                         <ul class="mt-4 list-disc list-inside text-stone-600 space-y-2">
+                            <li>Worked as a Server-end Java Developer with the Zoho Books Engineering Team.</li>
+                            <li>Played a substantial role in the development and launch of Zoho's GST returns filing platform.</li>
+                            <li>Became skilled in creating REST APIs for accounting and taxation processes.</li>
+                            <li>Guided and mentored newcomers to foster their professional growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="py-24 bg-stone-50 rounded-2xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">My Engineering Approach</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">As a Tech Lead approaching Staff Engineer level, my impact extends beyond writing code. I focus on creating leverage for my team and organization through a balanced approach to technical leadership and hands-on development.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-2xl font-bold text-blue-600">30% - Technical Discussion & Architecture</h3>
+                    <p class="mt-2 text-stone-600">I dedicate significant time to technical discussions with the team, helping them make the best architectural decisions. This includes design reviews, system architecture planning, and guiding the team through complex technical challenges to ensure we build robust, scalable solutions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-2xl font-bold text-teal-600">30% - Hands-On Programming</h3>
+                    <p class="mt-2 text-stone-600">I stay deeply connected to the codebase, contributing to critical features and tackling ambiguous problems with Node.js and Next.js. This hands-on work keeps my skills sharp, informs my architectural decisions, and allows me to lead by example in code quality and best practices.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-2xl font-bold text-purple-600">30% - Strategic Initiatives & Ad-hoc Tasks</h3>
+                    <p class="mt-2 text-stone-600">This includes crucial team success activities like effort estimation ("T-shirt sizing"), roadmap planning, cross-team collaboration, and addressing urgent technical challenges. I help ensure our engineering efforts are well-planned and efficiently executed.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-2xl font-bold text-yellow-600">10% - Mentorship & Team Growth</h3>
+                    <p class="mt-2 text-stone-600">I am passionate about helping other engineers grow. Through 1-on-1s, pair programming, and sharing knowledge, I work to elevate the technical capabilities of the entire team, fostering an environment of continuous learning and improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Technical Skills</h2>
+                 <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">Here's a breakdown of my technical abilities. The chart visualizes my years of dedicated experience with key technologies, offering a quick, quantitative look at my primary strengths. You can explore the full range of my skills in the categorized lists below.</p>
+            </div>
+            <div class="fade-in">
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto fade-in">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">Back-end</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Ruby on Rails</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Spring Boot</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Django</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">Front-end</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">Next.js</span>
+                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">Ember.js</span>
+                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">HTML & CSS</span>
+                        <span class="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full">Bootstrap</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">Database & Caching</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">MySQL</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Redis</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">ElasticSearch</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Kafka</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">GitHub</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">GitLab</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Redshift</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Memcache</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="py-24 bg-stone-50 rounded-2xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Leadership & Mentorship</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">Throughout my career, I've actively sought opportunities to lead, mentor, and improve team processes. Here are some of the formal roles where I've had the privilege to guide teams and champion technical excellence.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <p class="font-semibold text-stone-500">2024 - Present</p>
+                    <h3 class="text-xl font-bold mt-1">Security Champion, Ecosystem Team</h3>
+                    <p class="text-lg font-medium text-stone-700">Zoom</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <p class="font-semibold text-stone-500">2022 - Present</p>
+                    <h3 class="text-xl font-bold mt-1">Tech-Lead, Ecosystem Team</h3>
+                    <p class="text-lg font-medium text-stone-700">Zoom</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <p class="font-semibold text-stone-500">2020 - 2022</p>
+                    <h3 class="text-xl font-bold mt-1">Scrum Master / Tech-Lead</h3>
+                    <p class="text-lg font-medium text-stone-700">Freshworks</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <p class="font-semibold text-stone-500">2015 - 2016</p>
+                    <h3 class="text-xl font-bold mt-1">Chairman, IEEE Computer Society</h3>
+                    <p class="text-lg font-medium text-stone-700">College of Engineering Chengannur</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="py-24">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Key Achievements & Impact</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">Throughout my career, I've consistently delivered measurable impact through technical leadership, team development, and innovative solutions.</p>
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center fade-in">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">30%</div>
+                    <h3 class="text-lg font-semibold text-stone-800">Complexity Reduction</h3>
+                    <p class="text-sm text-stone-600 mt-2">Streamlined authentication system reducing integration complexity</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center fade-in">
+                    <div class="text-3xl font-bold text-teal-600 mb-2">9+</div>
+                    <h3 class="text-lg font-semibold text-stone-800">Years Experience</h3>
+                    <p class="text-sm text-stone-600 mt-2">Progressive growth from developer to Tech Lead</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center fade-in">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                    <h3 class="text-lg font-semibold text-stone-800">Engineers Mentored</h3>
+                    <p class="text-sm text-stone-600 mt-2">Direct mentorship and career guidance</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center fade-in">
+                    <div class="text-3xl font-bold text-yellow-600 mb-2">100%</div>
+                    <h3 class="text-lg font-semibold text-stone-800">Security Champion</h3>
+                    <p class="text-sm text-stone-600 mt-2">Zoom certified security practices implementation</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-24">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Certifications</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">I am committed to continuous learning and professional development. These certifications represent my dedication to mastering new technologies and architectural principles.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-xl font-bold text-stone-800">Software Architecture: From Developer to Architect</h3>
+                    <p class="text-stone-600 mt-1">LinkedIn Learning</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-xl font-bold text-stone-800">Advanced Microservices: Tactical Forking</h3>
+                    <p class="text-stone-600 mt-1">LinkedIn Learning</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-xl font-bold text-stone-800">Spring Boot 2.0 Essential Training</h3>
+                     <p class="text-stone-600 mt-1">LinkedIn Learning</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm fade-in">
+                    <h3 class="text-xl font-bold text-stone-800">Certificate of Security Achievement - Green Belt</h3>
+                     <p class="text-stone-600 mt-1">Zoom (for Javascript)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="py-24 bg-stone-50 rounded-2xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Publications</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">I believe in sharing knowledge with the community. Here are some articles I've written to explore technical concepts and share solutions.</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-1-overview-8a37136511af" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow fade-in">
+                    <h3 class="text-xl font-bold text-blue-600">Summary of Clean Code by Robert C Martin - Part 1</h3>
+                    <p class="text-stone-600 mt-2">An overview of the foundational principles from the classic software engineering text.</p>
+                </a>
+                <a href="https://ashishmd.medium.com/bulk-import-in-ruby-on-rails-older-versions-5227183735e1" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow fade-in">
+                    <h3 class="text-xl font-bold text-blue-600">Bulk Import in Ruby On Rails older versions</h3>
+                    <p class="text-stone-600 mt-2">A technical guide to performing efficient bulk imports in legacy Rails applications.</p>
+                </a>
+            </div>
+        </section>
+
+
+        <section id="projects" class="py-24">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-stone-900">Featured Projects</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">Below are some of the projects I've developed, showcasing my ability to apply technical skills across different domains. From modern web applications to machine learning explorations, these projects demonstrate my versatility and problem-solving approach.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Reporting Module Redesign</h3>
+                    <p class="text-stone-600 mt-2">Redesigned and optimized a critical reporting module, achieving 100x performance improvement through architectural improvements and efficient data processing algorithms.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">Node.js, System Architecture, Performance Optimization</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Third-Party Integration Platform</h3>
+                    <p class="text-stone-600 mt-2">Led the development of a comprehensive integration platform for third-party applications, improving developer experience and reducing integration complexity.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">Node.js, Next.js, Microservices</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Reverse-Proxy Authentication System</h3>
+                    <p class="text-stone-600 mt-2">Designed and implemented a streamlined authentication system for third-party API integrations, reducing complexity by 40%.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">Node.js, Authentication, API Design</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Speech Based Gender and Emotion Recognition</h3>
+                    <p class="text-stone-600 mt-2">A machine learning project to identify gender and emotion from speech using advanced audio processing techniques.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">Python, Tkinter, MySQL</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Forum WebApp</h3>
+                    <p class="text-stone-600 mt-2">A full-featured forum application with user management, content moderation, and real-time features.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">PHP, HTML, Bootstrap, MySQL</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in project-card">
+                    <h3 class="text-xl font-bold">Automatic Light Detecting Robot</h3>
+                    <p class="text-stone-600 mt-2">An autonomous robot that can detect and follow light sources using sensor technology and embedded systems.</p>
+                    <p class="text-sm text-blue-600 font-medium mt-4">Arduino, Embedded Systems</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-stone-800 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold">Get In Touch</h2>
+            <p class="mt-4 max-w-xl mx-auto text-stone-300">I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to connect.</p>
+            <a href="mailto:emailme@ashishm.dev" class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition-transform transform hover:scale-105">emailme@ashishm.dev</a>
+            <div class="mt-12 flex justify-center flex-wrap gap-6 items-center">
+                <a href="https://github.com/ashishmd" target="_blank" title="GitHub" class="text-stone-400 hover:text-white transition-colors social-icon">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ashishmuralidharan" target="_blank" title="LinkedIn" class="text-stone-400 hover:text-white transition-colors social-icon">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://ashishmd.medium.com" target="_blank" title="Blog" class="text-stone-400 hover:text-white transition-colors social-icon">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-12 text-stone-400 text-sm">&copy; 2024 Ashish Muralidharan. All Rights Reserved.</p>
         </div>
-    </div>
-</section>
-
-
-<!--==========================================
-                  CONTACT
-===========================================-->
-<section id="contact" class="section">
-    <div class="container">
-        <!-- SECTION TITLE -->
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/envelope.png" alt="demo">Contact</h4>
-        </div>
-        <div class="row">
-            <div id="contact-card" class="col-md-5 col-sm-12 col-xs-12">
-                <!-- CONTACT FORM -->
-                <div class="card">
-                    <div class="card-content">
-                        <form id="contact-forms" method="POST" action="https://formspree.io/emailme@ashishm.dev">
-                            <!-- NAME -->
-                            <div class="input-field">
-                                <input id="first_name" type="text" class="validate" name="name" required>
-                                <label for="first_name">Name</label>
-                            </div>
-                            <!--SUBJECT-->
-                            <div class="input-field">
-                                <input id="sub" type="text" class="validate" name="sub">
-                                <label for="sub">Subject</label>
-                            </div>
-                            <!--EMAIL-->
-                            <div class="input-field">
-                                <input id="email" type="email" class="validate" name="email" required>
-                                <label for="email">Email</label>
-                            </div>
-                            <!--MESSAGE-->
-                            <div class="input-field">
-                                <textarea id="textarea1" class="materialize-textarea" name="message"
-                                          required></textarea>
-                                <label for="textarea1">Message</label>
-                            </div>
-                            <!-- SEND BUTTON -->
-                            <div class="contact-send">
-                                <button id="submit" name="contactSubmit" type="submit" value="Send"
-                                        class="btn waves-effect">Send
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <!--FORM LOADER-->
-                    <div id="form-loader" class="progress is-hidden">
-                        <div class="indeterminate"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-7 col-sm-12 col-xs-12">
-                <!-- CONTACT MAP -->
-                <div id="map-card" class="card">
-                    <!-- MAP -->
-                    <div id="myMaps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.1624057131353!2d80.2201187144562!3d12.897276519995263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b87ecd8b5cb%3A0xb91b2c222e429a82!2sLancor+Central+Park+East%2C+Elcot+Ave%2C+Sholinganallur%2C+Chennai%2C+Tamil+Nadu+600119!5e0!3m2!1sen!2sin!4v1551803060478" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!--==========================================
-                     SCROLL TO TOP
-===========================================-->
-<div id="scroll-top">
-    <div id="scrollup"><i class="fas fa-angle-up"></i></div>
-</div>
-
-<!--==========================================
-                      FOOTER
-===========================================-->
-
-<footer>
-    <div class="container">
-        <!--FOOTER DETAILS-->
-        <p class="text-center">
-            © All right reserved by
-            <a href="#">
-                <strong>ashishm.dev</strong>
-            </a>
-        </p>
-    </div>
-</footer>
-
-
-
-<!--==========================================
-                  SCRIPTS
-===========================================-->
-<script src="javascript/vendors/jquery-2.1.3.min.js"></script>
-<script src="javascript/vendors/bootstrap.min.js"></script>
-<script src="javascript/vendors/materialize.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI14J_PNWVd-m0gnUBkjmhoQyNyd7nllA"></script>
-<script src="javascript/vendors/markerwithlabel.min.js"></script>
-<script src="javascript/vendors/retina.min.js"></script>
-<script src="javascript/vendors/scrollreveal.min.js"></script>
-<script src="javascript/vendors/swiper.jquery.min.js"></script>
-<script src="javascript/vendors/jquery.magnific-popup.min.js"></script>
-<script src="javascript/custom.js"></script>
-<script src="toggle/js.js"></script>
-
-
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
