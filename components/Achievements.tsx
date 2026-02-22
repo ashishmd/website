@@ -38,7 +38,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="section-padding bg-white dark:bg-gray-900"
+      className="section-padding scroll-mt-20 bg-white dark:bg-gray-900"
     >
       <div className="container-custom">
         <motion.div

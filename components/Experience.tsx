@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, ChevronDown, ChevronUp } from "lucide-react";
 
 const experiences = [
   {
@@ -61,11 +62,85 @@ const experiences = [
   },
 ];
 
+const INITIAL_VISIBLE = 5;
+
+function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = exp.highlights.length > INITIAL_VISIBLE;
+  const visibleHighlights = expanded ? exp.highlights : exp.highlights.slice(0, INITIAL_VISIBLE);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`relative mb-12 md:grid md:grid-cols-2 md:gap-8 ${
+        index % 2 === 0 ? "" : "md:grid-flow-dense"
+      }`}
+    >
+      <div className="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 transform -translate-x-1/2 z-10"></div>
+
+      <div
+        className={`ml-16 md:ml-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-200 dark:border-gray-700 ${
+          index % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
+        }`}
+      >
+        <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-2">
+          <Calendar className="w-4 h-4" />
+          <span className="text-sm font-semibold">{exp.period}</span>
+        </div>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+          {exp.title}
+        </h3>
+
+        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-4">
+          <Briefcase className="w-4 h-4" />
+          <span className="font-medium">{exp.company}</span>
+          <span>•</span>
+          <span>{exp.location}</span>
+        </div>
+
+        <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+          {visibleHighlights.map((highlight, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <span className="text-primary-600 dark:text-primary-400 mt-1">
+                ▸
+              </span>
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+
+        {hasMore && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-4 flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+          >
+            {expanded ? (
+              <>
+                <ChevronUp className="w-4 h-4" />
+                Show less
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4" />
+                Show {exp.highlights.length - INITIAL_VISIBLE} more
+              </>
+            )}
+          </button>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="section-padding bg-white dark:bg-gray-900"
+      className="section-padding scroll-mt-20 bg-white dark:bg-gray-900"
     >
       <div className="container-custom">
         <motion.div
@@ -86,53 +161,8 @@ export default function Experience() {
 
         <div className="relative">
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-600 to-purple-600"></div>
-
           {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative mb-12 md:grid md:grid-cols-2 md:gap-8 ${
-                index % 2 === 0 ? "" : "md:grid-flow-dense"
-              }`}
-            >
-              <div className="absolute left-8 md:left-1/2 top-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 transform -translate-x-1/2 z-10"></div>
-
-              <div
-                className={`ml-16 md:ml-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-200 dark:border-gray-700 ${
-                  index % 2 === 0 ? "md:col-start-1" : "md:col-start-2"
-                }`}
-              >
-                <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-2">
-                  <Calendar className="w-4 h-4" />
-                  <span className="text-sm font-semibold">{exp.period}</span>
-                </div>
-
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  {exp.title}
-                </h3>
-
-                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-4">
-                  <Briefcase className="w-4 h-4" />
-                  <span className="font-medium">{exp.company}</span>
-                  <span>•</span>
-                  <span>{exp.location}</span>
-                </div>
-
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                  {exp.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-primary-600 dark:text-primary-400 mt-1">
-                        ▸
-                      </span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+            <ExperienceCard key={index} exp={exp} index={index} />
           ))}
         </div>
       </div>

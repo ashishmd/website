@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, FileText, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -11,9 +11,8 @@ export default function Hero() {
       href: "https://www.linkedin.com/in/ashishmuralidharan",
       label: "LinkedIn",
     },
-    { icon: Globe, href: "https://ashishmd.medium.com", label: "Blog" },
+    { icon: BookOpen, href: "https://ashishmd.medium.com", label: "Blog" },
     { icon: Mail, href: "mailto:emailme@ashishm.dev", label: "Email" },
-    { icon: Globe, href: "http://ashishm.dev", label: "Portfolio" },
   ];
 
   return (
@@ -88,7 +87,7 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-8"
           >
             <a
-              href="/Ashish Muralidharan.pdf"
+              href="/Ashish-Muralidharan.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"

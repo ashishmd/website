@@ -98,7 +98,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      className="section-padding scroll-mt-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
     >
       <div className="container-custom">
         <motion.div

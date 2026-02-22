@@ -19,6 +19,8 @@ const projects = [
     ],
     impact:
       "70% CPU reduction, DB instance downsized, millions of rows archived, significant cost savings",
+    github: null,
+    link: null,
   },
   {
     title: "Real-Time Event Processing — 30x Performance Improvement",
@@ -33,6 +35,8 @@ const projects = [
     ],
     impact:
       "30x performance improvement (2.5 hours → 5 minutes for 30K events)",
+    github: null,
+    link: null,
   },
   {
     title: "Third-Party Integration Platform (App-Connector)",
@@ -50,6 +54,8 @@ const projects = [
     ],
     impact:
       "50x performance improvement, 50% cost reduction, 40% complexity reduction",
+    github: null,
+    link: null,
   },
   {
     title: "AI-Enhanced Development Workflow & Full-Stack Delivery",
@@ -66,6 +72,8 @@ const projects = [
     ],
     impact:
       "40–50% delivery time reduction, near-zero bug rate, team-wide AI adoption",
+    github: null,
+    link: null,
   },
 ];
 
@@ -73,7 +81,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      className="section-padding scroll-mt-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
     >
       <div className="container-custom">
         <motion.div
@@ -135,13 +143,39 @@ export default function Projects() {
               </div>
 
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-gray-600 dark:text-gray-400">
-                    Impact:
-                  </span>
-                  <span className="font-semibold text-green-600 dark:text-green-400">
-                    {project.impact}
-                  </span>
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-gray-600 dark:text-gray-400">
+                      Impact:
+                    </span>
+                    <span className="font-semibold text-green-600 dark:text-green-400">
+                      {project.impact}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                        aria-label="View on GitHub"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors"
+                        aria-label="View project"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>

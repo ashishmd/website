@@ -26,7 +26,7 @@ const approaches = [
 
 export default function Approach() {
   return (
-    <section id="approach" className="section-padding bg-white dark:bg-gray-900">
+    <section id="approach" className="section-padding scroll-mt-20 bg-white dark:bg-gray-900">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

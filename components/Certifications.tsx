@@ -9,7 +9,7 @@ const certifications = [
     issuer: "Zoom Video Communications",
     date: "2024",
     description:
-      "Certified Security Champion driving secure coding practices and elevating team security standards across the organization. Working towards Security Champion Plus certification.",
+      "Zoom Certified Security Champion Plus — driving secure coding practices, performing security reviews, data classification reviews, and elevating team security standards across the organization.",
   },
   {
     title: "Certificate of Security Achievement - Green Belt for Javascript",
@@ -38,7 +38,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      className="section-padding scroll-mt-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
     >
       <div className="container-custom">
         <motion.div
