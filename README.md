@@ -46,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 ## Project Structure
 
 ```
-portfolio-website/
+website/
 ├── app/
 │   ├── layout.tsx       # Root layout with theme provider
 │   ├── page.tsx         # Main page
