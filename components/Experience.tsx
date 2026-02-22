@@ -51,7 +51,7 @@ const experiences = [
   {
     period: "July 2016 - May 2018 (1 year 11 months)",
     title: "Software Developer",
-    company: "Cognizant Technology Solutions",
+    company: "Zoho",
     location: "Chennai",
     highlights: [
       "Developed enterprise applications using Java and related technologies.",
