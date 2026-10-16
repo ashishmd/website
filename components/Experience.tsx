@@ -4,60 +4,59 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, ChevronDown, ChevronUp } from "lucide-react";
 
+// Mirrors the résumé (public/Ashish-Muralidharan.pdf). Current-employer
+// details are kept generic: no internal product, team, or customer names.
 const experiences = [
   {
-    period: "June 2022 - Present (3+ years)",
-    title: "Tech Lead & Senior Software Engineer (SDE3/ZP3)",
+    period: "June 2022 - Present (4+ years)",
+    title: "Senior Software Engineer",
     company: "Zoom",
     location: "Remote",
     highlights: [
-      "Leading a team of engineers as Tech Lead, driving architectural decisions and technical strategy for Ecosystem and WFM teams. Recognized as Q3 Top Performer for application scalability improvements.",
-      "Zoom Certified Security Champion Plus — performing security reviews, data classification reviews, and driving team-wide security practices including threat modeling.",
-      "Achieved 30x performance improvement in a critical real-time event processing pipeline (2.5 hours → 5 minutes for 30K events) and 50x gains through architectural optimization on integration platforms.",
-      "Led database performance initiative: 70% CPU reduction, DB instance downsizing, and significant cost savings through schema restructuring, 15+ slow query fixes, and data archival of millions of rows.",
-      "Pioneered AI-enhanced development workflows (Cursor AI), reducing end-to-end delivery time by 40–50% while maintaining near-zero bug rate. Trained the team on AI-powered development practices.",
-      "Led Blue Green Deployment adoption — trained and guided the team through the first and second Blue Green deployments, improving deployment reliability and reducing risk.",
-      "Owned a major product release end-to-end, coordinating with Operations and ensuring zero production impact during deployment.",
-      "Delivered multiple full-stack features end-to-end across scheduling, reporting, and localization modules, demonstrating full-stack ownership from PRD through production.",
-      "Reduced historical data import time by 95% (from minutes to 80 seconds) for 50MB files using stream processing architecture.",
-      "Resolved critical system outages including OOM crashes, high-latency errors, and process crashes. Volunteered for overnight debugging sessions to ensure successful deployments.",
-      "Led architecture and implementation of Node.js/Next.js microservices and Java/Spring Boot integration platforms with reverse-proxy auth and PKCE, reducing integration complexity by 40%.",
-      "Organizer of bi-weekly Technical Thursdays since 2023 — sessions on deployment strategies, message queue architectures, Node.js internals, MySQL best practices, and performance optimization.",
-      "Reduced onboarding time for new team members by 1–2 weeks through comprehensive documentation, mentorship, and hands-on guidance in transitioning from Java to Node.js.",
+      "Tech lead for a team of 13 engineers, owning architecture decisions and technical strategy.",
+      "Leading the architectural decoupling that replaces a third-party vendor tool with an in-house product. Architected its privacy-first AI pipeline with dynamic PII redaction and LLM routing across tiered models to optimize API cost.",
+      "Built a high-performance LLM execution layer with Server-Sent Events for real-time token streaming and semantic caching to cut redundant API calls, plus observability dashboards for guardrails, token usage, and model telemetry.",
+      "Coordinated across squads with a partner product team to build core features that unblocked onboarding for major enterprise customers.",
+      "Designed a hot-warm-cold data-archival strategy and redesigned core tables, resolving 15+ complex queries with the team and taking database CPU from a constant 70–80% to 25–30%, enabling a smaller, cheaper instance.",
+      "Delivered a 24× speedup in user-event processing by removing throughput bottlenecks: 30,000 events now process in under 5 minutes instead of 120.",
+      "Led the foundational architecture of Java/Spring Boot and Node.js microservices, including a reverse-proxy authentication platform that delivered 21 enterprise integrations and was adopted by 5 product teams.",
+      "Championed an AI-enhanced development workflow and its standards across the team, reducing end-to-end feature delivery time by 70% with a near-zero defect rate.",
+      "Pioneered Blue-Green deployments across teams as Release Owner, delivering zero-downtime releases and upskilling peers on modern CI/CD.",
+      "Security Champion Plus: enforcing security and data-classification standards, running threat modeling, and mentoring engineers on secure system design.",
+      "Created and host Technical Thursdays, a biweekly engineering knowledge-sharing forum, since November 2022. Recognized as Q3 Top Performer.",
     ],
   },
   {
     period: "Nov 2020 - May 2022 (1 year 7 months)",
     title: "Fullstack Senior Software Developer",
-    company: "Freshworks Inc.",
+    company: "Freshworks",
     location: "Chennai",
     highlights: [
-      "Served as Squad Lead, Scrum Master, and Mentor, driving team efficiency and growth.",
-      "Collaborated with the Product team to design solutions for a highly scalable product using Ruby on Rails and EmberJS.",
-      "Proficiently triaged and debugged technical support requests, and minimized ticket influx by optimizing affected areas.",
-      "Championed clean code, TDD, and proactive knowledge sharing within the team.",
+      "Squad Lead and Scrum Master, driving technical roadmaps and working directly with Product Management to architect highly scalable web solutions in Ruby on Rails and EmberJS.",
+      "Analyzed defect trends to triage and debug support requests, finding systemic bottlenecks and fixing the affected areas to permanently reduce support-ticket volume.",
+      "Mentored junior engineers through pair programming and code reviews, upheld clean-code and TDD standards, and managed task delegation.",
     ],
   },
   {
     period: "June 2018 - Oct 2020 (2 years 5 months)",
     title: "Fullstack Software Developer",
-    company: "Freshworks Inc.",
+    company: "Freshworks",
     location: "Chennai",
     highlights: [
-      "Developed and maintained features for a SaaS product using Ruby on Rails and EmberJS.",
-      "Collaborated with cross-functional teams to deliver high-quality software solutions.",
-      "Participated in code reviews and contributed to improving development processes.",
+      "Led the backend implementation of core CRM functionality in Freshsales, including highly available email integration features.",
+      "Revamped and optimized legacy import/migration tools, significantly improving data-ingestion performance.",
+      "Played a key role in the architectural integration of Segment into the Freshsales ecosystem, improving cross-platform data insights.",
     ],
   },
   {
-    period: "July 2016 - May 2018 (1 year 11 months)",
-    title: "Software Developer",
-    company: "Zoho",
+    period: "May 2016 - May 2018 (2 years)",
+    title: "Member Technical Staff",
+    company: "Zoho Corporation",
     location: "Chennai",
     highlights: [
-      "Developed enterprise applications using Java and related technologies.",
-      "Worked on multiple client projects delivering solutions on time.",
-      "Gained experience in full software development lifecycle.",
+      "Built scalable REST APIs integrating accounting, invoicing, and taxation modules.",
+      "Played a substantial backend role in building and launching Zoho's GST returns-filing platform for enterprises.",
+      "Optimized complex MySQL queries to reduce latency, and built integrations between Zoho Books and AvaTax.",
     ],
   },
 ];
@@ -102,7 +101,10 @@ function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: num
           <span>{exp.location}</span>
         </div>
 
-        <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <ul
+          id={`experience-highlights-${index}`}
+          className="space-y-2 text-gray-700 dark:text-gray-300"
+        >
           {visibleHighlights.map((highlight, idx) => (
             <li key={idx} className="flex items-start gap-2">
               <span className="text-primary-600 dark:text-primary-400 mt-1">
@@ -115,7 +117,10 @@ function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: num
 
         {hasMore && (
           <button
+            type="button"
             onClick={() => setExpanded(!expanded)}
+            aria-expanded={expanded}
+            aria-controls={`experience-highlights-${index}`}
             className="mt-4 flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
           >
             {expanded ? (
@@ -154,8 +159,7 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            This timeline provides an overview of my career, showcasing my
-            progression through various roles and responsibilities.
+            10+ years across Zoom, Freshworks, and Zoho.
           </p>
         </motion.div>
 

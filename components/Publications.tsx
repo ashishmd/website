@@ -3,27 +3,28 @@
 import { motion } from 'framer-motion';
 import { BookOpen, ExternalLink } from 'lucide-react';
 
+// Sourced from https://medium.com/@ashishmd/feed — keep in sync when publishing.
 const publications = [
   {
-    title: 'Building Scalable Microservices with Node.js',
+    title: 'Why Your Team Needs a Security Champion (And Why It Should Be You)',
     platform: 'Medium',
-    date: 'March 2024',
-    description: 'A comprehensive guide on designing and implementing scalable microservices architecture using Node.js and best practices.',
-    link: 'https://ashishmd.medium.com',
+    date: 'April 2026',
+    description: 'Why security has to shift left into design and everyday development, and how a Security Champion makes it a shared team responsibility instead of a final gate.',
+    link: 'https://ashishmd.medium.com/why-your-team-needs-a-security-champion-and-why-it-should-be-you-03200ae65c2d',
   },
   {
-    title: 'System Design Patterns for Enterprise Applications',
+    title: 'Navigating the Challenges and Milestones as the First Member in Zoom Video Communications — India R&D Team for Contact Center',
     platform: 'Medium',
     date: 'January 2024',
-    description: 'Deep dive into common system design patterns and their practical applications in enterprise environments.',
-    link: 'https://ashishmd.medium.com',
+    description: 'The challenges and milestones of joining as the first member of Zoom’s India R&D team for Contact Center, after four years at Freshworks.',
+    link: 'https://ashishmd.medium.com/navigating-the-challenges-and-milestones-as-the-first-member-in-zoom-video-communications-india-b78679605770',
   },
   {
-    title: 'Performance Optimization Techniques in Backend Systems',
+    title: 'Summary of Clean Code by Robert C. Martin (3-part series)',
     platform: 'Medium',
-    date: 'November 2023',
-    description: 'Strategies and techniques for achieving significant performance improvements in backend systems.',
-    link: 'https://ashishmd.medium.com',
+    date: 'March 2021',
+    description: 'A practical, chapter-by-chapter summary of Clean Code, covering the overview, meaningful names, and writing small, single-purpose functions.',
+    link: 'https://ashishmd.medium.com/summary-of-clean-code-by-robert-c-martin-part-1-overview-c8894d975ebb',
   },
 ];
 
@@ -39,10 +40,10 @@ export default function Publications() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-            Publications & Articles
+            Writing
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Sharing knowledge and insights through technical writing
+            Articles on security, engineering culture, and clean code
           </p>
         </motion.div>
 

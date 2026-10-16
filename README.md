@@ -77,7 +77,9 @@ Edit the component files in the `components/` directory to update:
 - Update `app/globals.css` for global styles
 
 ### Resume
-Place your resume PDF as `public/Ashish_Muralidharan_Resume.pdf`
+Place your resume PDF as `public/Ashish-Muralidharan.pdf` (the only résumé file; linked from the hero).
+Before publishing, set the PDF title to "Ashish Muralidharan – Résumé" (Google Docs uses the document name).
+When you replace the PDF, update `resume.updated` in `lib/site.ts`. Shared facts (role, location, target roles, links) live in `lib/site.ts`; case-study content lives in `lib/caseStudies.ts`.
 
 ## Build for Production
 

@@ -14,11 +14,11 @@ const socialLinks = [
 ];
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Case Studies", href: "/#case-studies" },
+  { name: "How I Lead", href: "/#how-i-lead" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Résumé (PDF)", href: "/Ashish-Muralidharan.pdf" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {
@@ -33,8 +33,9 @@ export default function Footer() {
               Ashish Muralidharan
             </h3>
             <p className="text-sm leading-relaxed">
-              Tech Lead & Senior Software Engineer specializing in system
-              design, Java/Spring Boot, and Node.js/Next.js.
+              Senior Software Engineer &amp; Tech Lead. Backend platforms, system
+              design, performance, and security with Java, Spring Boot, and
+              Node.js.
             </p>
           </div>
 

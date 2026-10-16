@@ -1,109 +1,94 @@
 "use client";
 
 import Image from "next/image";
-import { Github, Linkedin, Mail, FileText, BookOpen } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, BookOpen, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { site } from "@/lib/site";
 
 export default function Hero() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/ashishmd", label: "GitHub" },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/in/ashishmuralidharan",
-      label: "LinkedIn",
-    },
-    { icon: BookOpen, href: "https://ashishmd.medium.com", label: "Blog" },
-    { icon: Mail, href: "mailto:emailme@ashishm.dev", label: "Email" },
+    // LinkedIn is omitted here: it already has its own CTA above.
+    { icon: Github, href: site.links.github, label: "GitHub" },
+    { icon: BookOpen, href: site.links.medium, label: "Blog on Medium" },
+    { icon: Mail, href: `mailto:${site.email}`, label: "Email" },
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      <div className="container-custom px-4 py-24 relative z-10">
+      <div className="container-custom px-4 pt-28 pb-20 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 max-w-6xl mx-auto">
 
-          {/* Text content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex-1 text-center lg:text-left"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white"
-            >
-              Ashish Muralidharan
-            </motion.h1>
+          {/* Text content: CSS-animated so it is visible before hydration */}
+          <div className="flex-1 text-center lg:text-left">
+            <p className="animate-fade-up text-lg font-semibold text-primary-600 dark:text-primary-400 mb-3">
+              Hi, I&apos;m {site.name}
+            </p>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl font-semibold mb-6 gradient-text"
+            <h1
+              className="animate-fade-up text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white leading-tight"
+              style={{ animationDelay: "0.05s" }}
             >
-              Tech Lead & Senior Software Engineer | System Design & Java/Node.js Specialist
-            </motion.h2>
+              {site.headline}
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 space-y-4"
+            <p
+              className="animate-fade-up text-lg md:text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200"
+              style={{ animationDelay: "0.1s" }}
             >
-              <p>
-                With over{" "}
-                <span className="font-semibold text-primary-600 dark:text-primary-400">
-                  9+ years of experience
-                </span>
-                , I am a Tech Lead and Security Champion Plus specializing in
-                system design and building scalable, resilient systems with
-                Java/Spring Boot and Node.js/Next.js. My expertise spans
-                enterprise-grade performance optimization, delivering up to{" "}
-                <span className="font-semibold text-primary-600 dark:text-primary-400">
-                  30–50x performance improvements
-                </span>
-                ,{" "}
-                <span className="font-semibold text-primary-600 dark:text-primary-400">
-                  70% CPU reduction
-                </span>
-                , and significant infrastructure cost savings through
-                architectural optimization.
-              </p>
-            </motion.div>
+              {site.role} · {site.experience} · Java, Spring Boot, Node.js ·
+              System design, performance &amp; security
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+            <p
+              className="animate-fade-up text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8"
+              style={{ animationDelay: "0.15s" }}
+            >
+              I work best with engineering organizations building high-scale
+              APIs, event-driven systems, privacy-sensitive AI pipelines, and
+              third-party integrations.
+            </p>
+
+            <div
+              className="animate-fade-up flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8"
+              style={{ animationDelay: "0.2s" }}
             >
               <a
-                href="/Ashish-Muralidharan.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#case-studies"
                 className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                <FileText className="w-5 h-5 mr-2" />
-                View Resume
+                View case studies
+                <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </a>
               <a
-                href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-primary-600 dark:text-primary-400 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-primary-600 dark:border-primary-400"
+                href={site.resume.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-5 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-primary-700 dark:text-primary-300 font-semibold rounded-lg shadow-md transition-all duration-300 border-2 border-primary-600 dark:border-primary-400"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Me
+                <FileText className="w-5 h-5 mr-2" aria-hidden="true" />
+                <span>
+                  Résumé
+                  <span className="ml-2 text-xs font-medium text-gray-600 dark:text-gray-400">
+                    PDF · Updated {site.resume.updated}
+                  </span>
+                </span>
               </a>
-            </motion.div>
+              <a
+                href={site.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-2 py-3 font-semibold text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 underline-offset-4 hover:underline"
+              >
+                <Linkedin className="w-5 h-5 mr-2" aria-hidden="true" />
+                Connect on LinkedIn
+              </a>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex justify-center lg:justify-start gap-4"
+            <div
+              className="animate-fade-up flex justify-center lg:justify-start gap-4"
+              style={{ animationDelay: "0.25s" }}
             >
               {socialLinks.map((link) => (
                 <motion.a
@@ -116,51 +101,31 @@ export default function Hero() {
                   className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
                   aria-label={link.label}
                 >
-                  <link.icon className="w-6 h-6" />
+                  <link.icon className="w-6 h-6" aria-hidden="true" />
                 </motion.a>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Profile photo */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex-shrink-0"
+          <div
+            className="animate-fade-up flex-shrink-0"
+            style={{ animationDelay: "0.1s" }}
           >
-            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-400 to-purple-600 blur-2xl opacity-30 scale-110" />
               <Image
                 src="/profile.jpeg"
-                alt="Ashish Muralidharan"
+                alt={`Portrait of ${site.name}`}
                 fill
+                sizes="(min-width: 1024px) 288px, (min-width: 768px) 256px, 192px"
                 className="rounded-full object-cover object-center shadow-2xl ring-4 ring-white dark:ring-gray-800 relative z-10"
                 priority
               />
             </div>
-          </motion.div>
+          </div>
 
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a
-          href="#about"
-          className="text-gray-400 hover:text-primary-600 transition-colors"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-        </a>
       </div>
     </section>
   );

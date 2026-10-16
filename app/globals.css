@@ -51,6 +51,35 @@ html {
   @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
 }
 
+/* Hero entrance animation in plain CSS so above-the-fold content
+   renders before (and without) JavaScript hydration. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-bounce {
+    animation: none;
+  }
+}
+
 .section-padding {
   @apply py-20 px-4 sm:px-6 lg:px-8;
 }
