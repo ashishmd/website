@@ -16,10 +16,10 @@ export default function About() {
           <div className="space-y-5 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
               I&apos;m a Senior Software Engineer and Tech Lead at Zoom, where I
-              lead a team of 13 engineers. Over 10+ years at Zoom, Freshworks,
-              and Zoho, I&apos;ve worked on backend platforms, third-party
-              integrations, data pipelines and, more recently, privacy-first AI
-              systems.
+              lead a team of 13 engineers. Across 10+ years of professional
+              experience at Zoom, Freshworks, and Zoho, I&apos;ve worked on
+              backend platforms, third-party integrations, data pipelines and,
+              more recently, privacy-first AI systems.
             </p>
             <p>
               I like problems where performance, security, and scale meet, and

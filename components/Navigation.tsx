@@ -52,6 +52,12 @@ export default function Navigation() {
           : 'bg-transparent'
       }`}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-md focus:bg-primary-600 focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
+      >
+        Skip to content
+      </a>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 px-4">
           <a
